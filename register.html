@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-card">
+    <h2>Register</h2>
+
+    <input id="name" placeholder="Name"><br>
+    <input id="email" placeholder="Email"><br>
+    <input id="password" type="password" placeholder="Password"><br>
+
+    <button onclick="register()">Register</button>
+
+    <p><a href="login.html">Login</a></p>
+</div>
+
+<script>
+function register(){
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    if(name && email){
+        alert("Registered Successfully");
+        window.location.href="login.html";
+    } else {
+        alert("Fill all fields");
+    }
+}
+</script>
+
+</body>
+</html>
