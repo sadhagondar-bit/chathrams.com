@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Admin Panel</h2>
+
+<div class="form-card">
+    <input id="name" placeholder="Hostel Name"><br>
+    <input id="capacity" placeholder="Capacity"><br>
+    <button onclick="add()">Add Hostel</button>
+</div>
+
+<div id="list"></div>
+
+<script>
+function add(){
+    let name = document.getElementById("name").value;
+    let cap = document.getElementById("capacity").value;
+
+    document.getElementById("list").innerHTML +=
+    `<div class="card">${name} - ${cap} rooms</div>`;
+}
+</script>
+
+</body>
+</html>
